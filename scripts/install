@@ -28,10 +28,6 @@ unzip ../tmp/master.zip -d ../tmp/master
 sudo cp -a ../tmp/master/Painter-master/* $final_path
 sudo rm -r ../tmp/master
 
-# Copy source files
-final_path=/var/www/$app
-sudo mkdir -p $final_path
-sudo cp -a ../sources/* $final_path
 
 # Modify Nginx configuration file and copy it to Nginx conf directory
 sed -i "s@YNH_WWW_PATH@$path@g" ../conf/nginx.conf
