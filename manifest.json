@@ -1,6 +1,6 @@
 {
-    "name": "Painter",
-    "id": "Painter",
+    "name": "painter",
+    "id": "painter",
     "description": {
         "en": "Painter is a simple webapp for drawing based on HTML5 Canvas."
     },
