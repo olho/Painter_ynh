@@ -1,14 +1,14 @@
 {
-    "name": "YunoHost example app",
-    "id": "ynhexample",
+    "name": "Painter",
+    "id": "Painter",
     "description": {
-        "en": "Example package for Yunohost applications."
+        "en": "Painter is a simple webapp for drawing based on HTML5 Canvas."
     },
-    "licence": "GPL-2",
+    "licence": " Released under the MIT,Apache BSD, and GPL Licenses.",
     "developer": {
         "name": "John doe",
-        "email": "john.doe@example.com",
-        "url": "http://example.com"
+        "email": "estrolix@gmail.com",
+        "url": "http://estrolix.com"
     },
     "multi_instance": "false",
     "arguments": {
@@ -16,17 +16,17 @@
             {
                 "name": "domain",
                 "ask": {
-                    "en": "Choose a domain for ynhexample"
+                    "en": "Choose a domain for Painter"
                 },
-                "example": "example.com"
+                "example": "domain.org"
             },
             {
                 "name": "path",
                 "ask": {
-                    "en": "Choose a path for ynhexample"
+                    "en": "Choose a path for Painter"
                 },
-                "example": "/example",
-                "default": "/example"
+                "example": "/painter",
+                "default": "/painter"
             },
             {
                 "name": "admin",
@@ -41,7 +41,7 @@
                     "en": "Is it a public application ?"
                 },
                 "choices": ["Yes", "No"],
-                "default": "Yes"
+                "default": "No"
             }
         ]
     }
