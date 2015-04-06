@@ -1,5 +1,5 @@
 #!/bin/bash
-app=ynhexample
+app=Painter
 
 # Retrieve arguments
 domain=$(sudo yunohost app setting $app domain)
