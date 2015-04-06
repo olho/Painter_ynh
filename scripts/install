@@ -27,7 +27,7 @@ echo "Deploying source files..."
 unzip ../tmp/master.zip -d ../tmp/master
 sudo cp -a ../tmp/master/Painter-master/* $final_path
 sudo rm -r ../tmp/master
-
+sudo chown -R www-data: $final_path
 
 # Modify Nginx configuration file and copy it to Nginx conf directory
 sed -i "s@YNH_WWW_PATH@$path@g" ../conf/nginx.conf
