@@ -1,5 +1,5 @@
 #!/bin/bash
-app=ynhexample
+app=Painter
 
 # Retrieve arguments
 domain=$1
@@ -16,6 +16,17 @@ sudo yunohost app checkurl $domain$path -a $app
 if [[ ! $? -eq 0 ]]; then
     exit 1
 fi
+
+final_path=/var/www/$app
+sudo mkdir -p $final_path
+sudo apt-get install unzip
+echo "Downloading Painter master version..."
+mkdir ../tmp
+sudo wget -O ../tmp/master.zip "https://github.com/estrolix/Painter/archive/master.zip"
+echo "Deploying source files..."
+unzip ../tmp/master.zip -d ../tmp/master
+sudo cp -a ../tmp/master/Painter-master/* $final_path
+sudo rm -r ../tmp/master
 
 # Copy source files
 final_path=/var/www/$app
